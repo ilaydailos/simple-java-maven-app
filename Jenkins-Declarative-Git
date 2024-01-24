@@ -1,0 +1,10 @@
+pipeline {
+  agent any
+  stages {
+    stage('Git Checkout') {
+      steps {
+        git credentialsId: 'ilayda-123', url: 'https://github.com/jenkins-docs/simple-java-maven-app.git'
+      }
+    }
+  }
+}
